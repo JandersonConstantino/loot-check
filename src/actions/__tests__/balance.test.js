@@ -1,12 +1,21 @@
-import * as types from '../../constants'
-import * as actions from '../balance'
+import * as types from "../../constants"
+import * as actions from "../balance"
 
 
-
-it('creates an action to set the balance', () => {
-  const balance = 0
-
-  const expectedAction = { type: types.SET_BALANCE, payload: balance }
-
-  expect(actions.setBalance(balance)).toEqual(expectedAction)
+describe("Balance Reducer", () => {
+  it("creates an action to set the balance", () => {
+    const balance = 0
+  
+    const expectedAction = { type: types.SET_BALANCE, payload: balance }
+  
+    expect(actions.setBalance(balance)).toEqual(expectedAction)
+  })
+  
+  it("creates an action to deposit into the balance", () => {
+      const deposit = 20
+  
+      const expectedAction = { type: types.DEPOSIT, payload: deposit }
+  
+      expect(actions.deposit(deposit)).toEqual(expectedAction)
+  })
 })
