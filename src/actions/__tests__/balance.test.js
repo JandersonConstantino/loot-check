@@ -18,4 +18,12 @@ describe("Balance Reducer", () => {
   
       expect(actions.deposit(deposit)).toEqual(expectedAction)
   })
+
+  it("creates an action to withdraw from the balance", () => {
+    const withDraw = 20
+
+    const expectedAction = { type: types.WITHDRAW, payload: withDraw }
+
+    expect(actions.withDraw(withDraw)).toEqual(expectedAction)
+  })
 })

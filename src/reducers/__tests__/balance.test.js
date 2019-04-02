@@ -23,4 +23,16 @@ describe("balanceReducer", () => {
     })).toEqual(expectedValue)
 
   })
+
+  it("withdraw from the balance", () => {
+    const initialState = 20
+    const withDraw = 5
+    
+    const expectedValue = initialState - withDraw
+
+    expect(balanceReducer(initialState, {
+      type: types.WITHDRAW,
+      payload: withDraw
+    })).toEqual(expectedValue)
+  })
 })

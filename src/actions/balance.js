@@ -9,3 +9,8 @@ export const deposit = deposit => ({
   type: types.DEPOSIT,
   payload: deposit
 })
+
+export const withDraw = withDraw => ({
+  type: types.WITHDRAW,
+  payload: withDraw
+})

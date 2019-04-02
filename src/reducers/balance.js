@@ -10,6 +10,9 @@ const balance = (state = INITIAL_STATE, action) => {
     case types.DEPOSIT:
       return state + action.payload
 
+    case types.WITHDRAW:
+      return state - action.payload
+
     default:
       return state
   }
