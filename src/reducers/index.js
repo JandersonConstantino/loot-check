@@ -1,10 +1,12 @@
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers } from "redux"
 
-import rootReducer from './balance'
+import balance from "./balance"
+import bitcoin from "./bitcoin"
 
 const store = createStore(
   combineReducers({
-    balance: rootReducer,
+    balance,
+    bitcoin,
   })
 )
 
